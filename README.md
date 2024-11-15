@@ -12,6 +12,7 @@ A clean, responsive, and interactive personal portfolio webpage with modern desi
 - Section reveal animations
 - Modern, minimalist UI
 - Interactive skill cards
+- Project showcase section
 
 ## Technologies Used
 
@@ -35,47 +36,115 @@ portfolio/
 ## Getting Started
 
 1. Clone or download this repository
-2. Customize your information in `config.js`:
-   - Update personal information (name, title, about text)
-   - Set your profile picture URL
-   - Configure your skills and progress levels
-   - Add your social media links
-   - Customize theme colors if desired
+2. Customize your information in `config.js` (see Configuration section below)
 3. Open `index.html` in a web browser to view the page
 
-## Customization
+## Configuration
+
+The `config.js` file contains all customizable content. Here's how to configure each section:
 
 ### Personal Information
-Edit the `config.js` file to update your information:
-
 ```javascript
-const config = {
+{
+    // Basic Info
     name: "Your Name",
-    title: "Your Title",
+    title: "Your Professional Title",
     profileImage: "path/to/your/image.jpg",
-    aboutMe: "Your description",
-    // ... other configurations
-};
-```
+    aboutMe: "Your professional summary",
 
-### Changing Colors
+    // Skills List
+    skills: [
+        {
+            name: "Skill Name",
+            progress: 90,  // Percentage of proficiency
+            icon: "fa-code"  // Font Awesome icon class
+        }
+        // Add more skills as needed
+    ],
 
-The color scheme can be customized in `config.js` under the theme section:
+    // Project Showcase
+    projects: [
+        {
+            title: "Project Name",
+            description: "Project description",
+            image: "path/to/project/image.jpg",
+            tags: ["Technology1", "Technology2"],  // Tech stack
+            liveUrl: "https://your-demo-url.com",
+            githubUrl: "https://github.com/username/repo"
+        }
+        // Add more projects as needed
+    ],
 
-```javascript
-theme: {
-    light: {
-        primary: "#2ecc71",
-        background: "#ffffff",
-        // ... other color variables
+    // Social Media Links
+    socialMedia: {
+        github: "https://github.com/yourusername",
+        linkedin: "https://linkedin.com/in/yourusername",
+        twitter: "https://twitter.com/yourusername"
     },
-    dark: {
-        // ... dark theme colors
+
+    // Theme Colors
+    theme: {
+        light: {
+            primary: "#2ecc71",    // Main accent color
+            background: "#ffffff", // Page background
+            text: "#333333",      // Text color
+            cardBg: "#f5f5f5",    // Card background
+            navBg: "rgba(255, 255, 255, 0.9)"
+        },
+        dark: {
+            // Dark theme colors (same structure as light)
+        }
     }
 }
 ```
 
-### Adding New Sections
+### Customization Examples
+
+1. **Adding a New Skill**
+```javascript
+skills: [
+    {
+        name: "React",
+        progress: 85,
+        icon: "fa-react"  // Font Awesome icon
+    }
+]
+```
+
+2. **Adding a New Project**
+```javascript
+projects: [
+    {
+        title: "Portfolio Website",
+        description: "Personal portfolio built with modern web technologies",
+        image: "./images/portfolio.jpg",
+        tags: ["HTML5", "CSS3", "JavaScript"],
+        liveUrl: "https://myportfolio.com",
+        githubUrl: "https://github.com/username/portfolio"
+    }
+]
+```
+
+3. **Customizing Theme Colors**
+```javascript
+theme: {
+    light: {
+        primary: "#007bff",    // Change to your preferred color
+        background: "#f8f9fa",
+        text: "#212529",
+        cardBg: "#ffffff"
+    }
+}
+```
+
+### Font Awesome Icons
+
+This project uses Font Awesome for icons. To find icon classes:
+1. Visit [Font Awesome](https://fontawesome.com/icons)
+2. Search for your desired icon
+3. Use the icon class name (e.g., "fa-github", "fa-code")
+
+## Adding New Sections
 
 1. Create a new section in `index.html`:
 ```html
@@ -89,23 +158,7 @@ theme: {
 <a href="#new-section" class="nav-link">New Section</a>
 ```
 
-## Features in Detail
-
-### Theme Toggle
-- Switches between light and dark themes
-- Persists across page reloads
-- Smooth transition animations
-
-### Skill Bars
-- Animated progress indicators
-- Responsive to viewport
-- Custom icons for each skill
-
-### Animations
-- Typing effect for name
-- Scroll-based reveal animations
-- Hover effects on interactive elements
-- Smooth transitions between states
+3. Add corresponding configuration in `config.js` if needed
 
 ## Browser Support
 

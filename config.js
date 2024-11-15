@@ -24,6 +24,34 @@ const config = {
         }
     ],
 
+    // Projects Configuration
+    projects: [
+        {
+            title: "E-commerce Platform",
+            description: "A full-featured online store with shopping cart and payment integration",
+            image: "https://via.placeholder.com/300x200",
+            tags: ["React", "Node.js", "MongoDB"],
+            liveUrl: "https://project1.example.com",
+            githubUrl: "https://github.com/yourusername/project1"
+        },
+        {
+            title: "Weather Dashboard",
+            description: "Real-time weather tracking app with interactive maps",
+            image: "https://via.placeholder.com/300x200",
+            tags: ["JavaScript", "Weather API", "Leaflet.js"],
+            liveUrl: "https://project2.example.com",
+            githubUrl: "https://github.com/yourusername/project2"
+        },
+        {
+            title: "Task Manager",
+            description: "Collaborative task management system with real-time updates",
+            image: "https://via.placeholder.com/300x200",
+            tags: ["Vue.js", "Firebase", "Bootstrap"],
+            liveUrl: "https://project3.example.com",
+            githubUrl: "https://github.com/yourusername/project3"
+        }
+    ],
+
     // Social Media Links
     socialMedia: {
         github: "https://github.com/yourusername",

@@ -22,6 +22,29 @@ function initializeContent() {
             </div>
         </div>
     `).join('');
+
+    // Generate project cards
+    const projectsContainer = document.getElementById('projects-container');
+    projectsContainer.innerHTML = config.projects.map(project => `
+        <div class="project-card">
+            <img src="${project.image}" alt="${project.title}" class="project-image">
+            <div class="project-content">
+                <h3 class="project-title">${project.title}</h3>
+                <p class="project-description">${project.description}</p>
+                <div class="project-tags">
+                    ${project.tags.map(tag => `<span class="project-tag">${tag}</span>`).join('')}
+                </div>
+                <div class="project-links">
+                    <a href="${project.liveUrl}" target="_blank" class="project-link">
+                        <i class="fas fa-external-link-alt"></i> Live Demo
+                    </a>
+                    <a href="${project.githubUrl}" target="_blank" class="project-link">
+                        <i class="fab fa-github"></i> Source Code
+                    </a>
+                </div>
+            </div>
+        </div>
+    `).join('');
 }
 
 // Initialize theme colors from config
