@@ -4,14 +4,14 @@ A clean, responsive, and interactive personal portfolio webpage with modern desi
 
 ## Features
 
-- 🌓 Dark/Light theme toggle
-- ⌨️ Typing animation effect
-- 📱 Fully responsive design
-- 🎯 Animated skill progress bars
-- 🔄 Smooth scroll navigation
-- ✨ Section reveal animations
-- 🎨 Modern, minimalist UI
-- 📊 Interactive skill cards
+- Dark/Light theme toggle
+- Typing animation effect
+- Fully responsive design
+- Animated skill progress bars
+- Smooth scroll navigation
+- Section reveal animations
+- Modern, minimalist UI
+- Interactive skill cards
 
 ## Technologies Used
 
@@ -28,31 +28,50 @@ portfolio/
 ├── index.html          # Main HTML file
 ├── styles.css          # CSS styles and animations
 ├── script.js           # JavaScript for interactivity
+├── config.js          # Configuration file for personal information and themes
 └── README.md          # Project documentation
 ```
 
 ## Getting Started
 
 1. Clone or download this repository
-2. Customize the content in `index.html`:
-   - Replace "[Your Name]" with your name
-   - Update the profile picture (replace placeholder URL)
-   - Modify skills and progress percentages
+2. Customize your information in `config.js`:
+   - Update personal information (name, title, about text)
+   - Set your profile picture URL
+   - Configure your skills and progress levels
    - Add your social media links
+   - Customize theme colors if desired
 3. Open `index.html` in a web browser to view the page
 
 ## Customization
 
+### Personal Information
+Edit the `config.js` file to update your information:
+
+```javascript
+const config = {
+    name: "Your Name",
+    title: "Your Title",
+    profileImage: "path/to/your/image.jpg",
+    aboutMe: "Your description",
+    // ... other configurations
+};
+```
+
 ### Changing Colors
 
-The color scheme can be customized in `styles.css`. Look for the `:root` selector:
+The color scheme can be customized in `config.js` under the theme section:
 
-```css
-:root {
-    --primary-color: #2ecc71;
-    --bg-color: #ffffff;
-    --text-color: #333333;
-    /* ... other color variables ... */
+```javascript
+theme: {
+    light: {
+        primary: "#2ecc71",
+        background: "#ffffff",
+        // ... other color variables
+    },
+    dark: {
+        // ... dark theme colors
+    }
 }
 ```
 

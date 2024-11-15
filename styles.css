@@ -1,4 +1,5 @@
 :root {
+    /* Theme variables will be set via JavaScript */
     --primary-color: #2ecc71;
     --bg-color: #ffffff;
     --text-color: #333333;
